@@ -1,5 +1,5 @@
 """
-    i few code samples that lets you communicate with https://radioactive.digital/communication
+    i added few code samples that lets you communicate with https://radioactive.digital/communication
 """
 import bs4 as bs
 import requests
