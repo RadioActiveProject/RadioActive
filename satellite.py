@@ -41,9 +41,9 @@ class Satellite:
             return
 
         if hashlib.sha256((id + cookie).encode('utf-8')).hexdigest() == pw and id == 'admin':
-            self.execute(command)
-            self.client_socket.send(f"the satellite did command: {command}".encode('utf-8'))
-            return
+            # success! command is executed using ProbeAPI
+            return self.execute(command) 
+            
 
         self.client_socket.send(f"invalid user".encode('utf-8'))
         return
